@@ -8,7 +8,7 @@ namespace adventOfCode
         {
              
             int[] lineCount; //arry to count iterations of each letter
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Addison\Documents\adventOfCode\day2_input.txt");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Addison\source\repos\adventOfCode\day2_input.txt");
             lineCount = new int[26];
             int twice = 0;
             int thrice = 0;
