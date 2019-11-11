@@ -22,12 +22,12 @@ namespace adventOfCode
                 foreach (string line in lines)
                 {
                     lineCount = countLetters(line);
-                    foundTwice = false;
+                    foundTwice = false; //once one letter is found twice, we dont want to double count an ID if we find another letter exactly twice
                     foundThrice = false;
                     foreach (int i in lineCount)
                      {
-                        if ((i == 2) && (foundTwice == false)) { twice++; foundTwice = true; }
-                        else if ((i ==3) && (foundThrice == false)) { thrice++; foundThrice = true; }
+                    if ((i == 2) && (foundTwice == false)) { twice++; foundTwice = true; } //set bool to true once we find the first one.
+                    else if ((i == 3) && (foundThrice == false)) { thrice++; foundThrice = true; }
                       }
                 }
             int checkSum = twice * thrice;
@@ -43,7 +43,7 @@ namespace adventOfCode
 
             foreach (char c in charArr)
             {
-                int ascii = ((int)c - 97);
+                int ascii = ((int)c - 97); //casts character to int and subtracts 97 (ascii value of 'a') so the alphabet array lines up.
                 alphabet[ascii]++;
             }
 
